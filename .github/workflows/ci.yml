@@ -23,4 +23,4 @@ jobs:
           key: ${{ runner.os }}-poetry-${{ hashFiles('poetry.lock') }}
       - run: poetry --version
       - run: poetry install
-      - run: pytest
+      - run: poetry shell && pytest
