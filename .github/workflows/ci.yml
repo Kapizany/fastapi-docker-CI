@@ -2,7 +2,12 @@ name: ci-fastapi-workflow
 on: 
   pull_request:
     branches:
-      -develop
+      - develop
+  push:
+    branches:
+      - '**'        # matches every branch
+      - '!master'   # excludes master
+      - '!develop'   # excludes develop
 jobs:
   check-application:
     runs-on: ubuntu-latest
