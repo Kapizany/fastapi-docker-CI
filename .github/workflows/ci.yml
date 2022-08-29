@@ -6,7 +6,7 @@ on:
   push:
     branches:
       - '**'        # matches every branch
-      - '!master'   # excludes master
+      - '!main'   # excludes main
       - '!develop'   # excludes develop
 jobs:
   check-application:
