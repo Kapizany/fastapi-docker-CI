@@ -24,3 +24,15 @@ jobs:
       - run: poetry config virtualenvs.create false
       - run: poetry install
       - run: pytest
+      
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v2
+      
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Build and push
+        uses: docker/build-push-action@v3
+        with:
+          push: false
+          tags: capizani/fastapi-docker-CI:latest
