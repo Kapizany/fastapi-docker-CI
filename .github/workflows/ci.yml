@@ -35,4 +35,4 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: false
-          tags: capizani/fastapi-docker-CI:latest
+          tags: capizani/fastapi-docker-ci:latest
