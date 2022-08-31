@@ -3,11 +3,7 @@ on:
   pull_request:
     branches:
       - develop
-  push:
-    branches:
-      - '**'        # matches every branch
-      - '!main'   # excludes main
-      - '!develop'   # excludes develop
+      - main
 jobs:
   check-application:
     runs-on: ubuntu-latest
