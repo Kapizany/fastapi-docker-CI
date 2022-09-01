@@ -31,4 +31,4 @@ def test_sub():
 def test_mult():
     response = client.get("/mult/5/3")
     assert response.status_code == 200
-    assert response.json() == {"message": f"The mult is {5 * 3}"}
+    assert response.json() == {"message": f"The sum is {5 * 3}"}
