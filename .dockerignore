@@ -1,0 +1,4 @@
+.scannerwork
+venv
+coverage.xml
+.coverage
