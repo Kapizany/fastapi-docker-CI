@@ -20,5 +20,6 @@ RUN ls
 # install dependencies
 RUN poetry install
 ENV PYTHONPATH=/app
+RUN coverage run -m pytest && coverage xml
 
 CMD uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
